@@ -1697,6 +1697,10 @@
             </intent-filter>
         </activity>
 
+        <!-- Interface Begin -->
+        <activity android:name=".dna.DNASettings" />
+        <!-- Interface End -->
+
         <receiver android:name=".widget.SettingsAppWidgetProvider"
                 android:label="@string/gadget_title"
                 android:exported="false"

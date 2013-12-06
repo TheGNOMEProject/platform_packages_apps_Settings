@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Interface -->
+    <!-- DNA Setttings -->
+    <!-- Settings main menu category heading -->
+    <string name="header_category_interface">INTERFACE</string>
+    <!-- System Interface settings -->
+    <string name="dna_settings_title">DNA Settings</string>
+    <string name="system_interface_title">DNA Settings</string>
+</resources>

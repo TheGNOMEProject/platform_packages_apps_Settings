@@ -170,6 +170,16 @@
             android:action="android.settings.ADD_ACCOUNT_SETTINGS"/>
     </header>
 
+    <!-- Interface -->
+    <header
+        android:title="@string/header_category_interface" />
+    <!-- DNA -->
+    <header
+        android:id="@+id/dna_settings"
+        android:icon="@drawable/ic_settings_dna"
+        android:fragment="com.android.settings.dna.DNASettings"
+        android:title="@string/dna_settings_title" />  
+
     <!-- SYSTEM -->
     <header android:id="@+id/system_section"
         android:title="@string/header_category_system" />

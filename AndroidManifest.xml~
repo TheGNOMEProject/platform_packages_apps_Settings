@@ -1699,7 +1699,7 @@
 
         <!-- GNOME II START-->
         <activity android:name=".gnome.GnomeSettings" />
-        <!-- GNOME II END -->
+        <!-- GNOME II END
 
         <receiver android:name=".widget.SettingsAppWidgetProvider"
                 android:label="@string/gadget_title"

@@ -170,6 +170,16 @@
             android:action="android.settings.ADD_ACCOUNT_SETTINGS"/>
     </header>
 
+    <!-- GNOME II -->
+    <header
+        android:title="@string/header_category_interface" />
+    <!-- Settings -->
+    <header
+        android:id="@+id/gnome_settings"
+        android:icon="@drawable/ic_settings_gnome"
+        android:fragment="com.android.settings.gnome.GnomeSettings"
+        android:title="@string/gnome_settings_title" />
+
     <!-- SYSTEM -->
     <header android:id="@+id/system_section"
         android:title="@string/header_category_system" />

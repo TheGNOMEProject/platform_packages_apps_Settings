@@ -15,7 +15,6 @@
     <!-- System Interface settings -->
     <string name="gnome_settings_title">Settings</string>
     <string name="system_interface_title">Settings</string>
-
     <!-- Navigation ring shortcuts -->
     <string name="navigation_ring_title">Quick launch </string>
     <string name="navring_target_reset_message">Delete all user quick launch shortcuts and restore to default?</string>
@@ -32,4 +31,5 @@
     <string name="navring_action_google_now">Google Now</string>
     <string name="navring_choose_action_title">Choose action</string>
     <string name="navring_action_power_menu">Power menu</string>
+    <string name="lockscreen_target_info">Drag the slider to targets to assign shortcuts</string>
 </resources>

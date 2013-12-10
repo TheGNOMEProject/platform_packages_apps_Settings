@@ -23,9 +23,9 @@
     <string name="general_string">General</string>
     <string name="reset_string">Reset</string>
     <!-- Navigation ring shortcuts -->
-    <string name="navigation_ring_title">NavBar Shortcuts</string>
-    <string name="navring_target_reset_message">Delete all user NavBar Shortcuts and restore to default?</string>
-    <string name="navring_target_reset">NavBar Shortcuts reset to default</string>
+    <string name="navigation_ring_title">Quick launch </string>
+    <string name="navring_target_reset_message">Delete all user quick launch shortcuts and restore to default?</string>
+    <string name="navring_target_reset">Quick launch shortcuts reset to default</string>
     <string name="navring_action_open_ime_switcher">Open IME Switcher</string>
     <string name="navring_action_kill_app">Kill app</string>
     <string name="navring_action_none">None</string>

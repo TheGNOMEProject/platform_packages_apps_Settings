@@ -8,6 +8,9 @@
     <!-- GNOME II version -->
     <string name="gnome_version">GNOME II version</string>
     <string name="gnome_version_default">x</string>
+    
+    <!-- Xposed -->
+    <string name="xposed">Xposed</string>
 
     <!-- GNOME II Setttings -->
     <!-- Settings main menu category heading -->

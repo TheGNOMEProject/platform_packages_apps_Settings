@@ -9,4 +9,9 @@
         android:fragment="com.android.settings.gnome.NavRing"
         android:key="navigation_ring"
         android:title="@string/navigation_ring_title" />
+
+    <PreferenceScreen
+        android:fragment="de.robv.android.xposed.installer.XposedApp"
+        android:key="xposed"
+        android:title="@string/xposed" />
 </PreferenceScreen>

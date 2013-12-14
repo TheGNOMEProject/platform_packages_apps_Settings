@@ -12,6 +12,9 @@
     <!-- Xposed -->
     <string name="xposed">Xposed</string>
 
+    <!-- App Ops -->
+    <string name="appops_settings_title">App Privacy</string>
+
     <!-- GNOME II Setttings -->
     <!-- Settings main menu category heading -->
     <string name="header_category_interface">GNOME II</string>

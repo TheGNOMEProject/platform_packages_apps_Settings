@@ -173,12 +173,23 @@
     <!-- GNOME II -->
     <header
         android:title="@string/header_category_interface" />
+
     <!-- Settings -->
     <header
         android:id="@+id/gnome_settings"
         android:icon="@drawable/ic_settings_gnome"
         android:fragment="com.android.settings.gnome.GnomeSettings"
         android:title="@string/gnome_settings_title" />
+
+    <!-- Xposed -->
+    <header
+	android:title="@string/xposed"
+	android:icon="@drawable/ic_settings_xposed" >
+    <intent
+	android:targetPackage="de.robv.android.xposed.installer" 
+	android:action="android.intent.action.MAIN" 
+	android:targetClass="de.robv.android.xposed.installer.XposedInstallerActivity" />
+    </header>
 
     <!-- SYSTEM -->
     <header android:id="@+id/system_section"

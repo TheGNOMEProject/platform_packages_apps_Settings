@@ -5,14 +5,20 @@
     android:title="@string/system_interface_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <!-- Navigation bar settings -->
+    <PreferenceCategory
+	android:key="navigation_bar_header"
+	android:title="@string/navigation_bar_header_title">
+
     <PreferenceScreen
         android:fragment="com.android.settings.gnome.NavRing"
         android:key="navigation_ring"
         android:title="@string/navigation_ring_title" />
 
     <PreferenceScreen
-        android:key="nav_bar"
-        android:title="@string/navbar_settings_title"
-        android:fragment="com.android.settings.gnome.NavbarSettings" />
+        android:key="navigation_bar"
+        android:fragment="com.android.settings.gnome.NavBar"
+        android:title="@string/navigation_bar_title" />
 
+    </PreferenceCategory>
 </PreferenceScreen>

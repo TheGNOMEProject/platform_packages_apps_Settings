@@ -26,7 +26,7 @@ public class NavbarSettings extends SettingsPreferenceFragment implements OnPref
         super.onCreate(savedInstanceState);
 
         // Load the preferences from an XML resource
-        addPreferencesFromResource(R.xml.navbar_settings);
+        addPreferencesFromResource(R.xml.gnome_settings);
 
         PreferenceScreen prefs = getPreferenceScreen();
 

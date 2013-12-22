@@ -113,6 +113,4 @@
     <string name="hide_non_clearable_summary">Hide all non clearable notifications</string>
     <string name="dismiss_all">Allow dismissing all notifications</string>
     <string name="dismiss_all_summary">Allow dismissing even non clearable notifications. Of course, they\'re just hidden from lockscreen and not from the notification panel.</string>
-    <string name="expanded_view">Expanded notification view</string>
-    <string name="expanded_view_summary">Show notifications expanded when possible</string>
 </resources>

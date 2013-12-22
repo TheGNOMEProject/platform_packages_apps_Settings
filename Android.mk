@@ -9,6 +9,11 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := \
         $(call all-java-files-under, src) \
         src/com/android/settings/EventLogTags.logtags
+LOCAL_SRC_FILES += $(call all-java-files-under, ../PerformanceControl/src)
+
+LOCAL_RESOURCE_DIR += packages/apps/PerformanceControl/res
+
+LOCAL_ASSET_DIR += packages/apps/PerformanceControl/assets
 
 LOCAL_PACKAGE_NAME := Settings
 LOCAL_CERTIFICATE := platform
@@ -16,7 +21,8 @@ LOCAL_PRIVILEGED_MODULE := true
 
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 
-LOCAL_AAPT_FLAGS += -c zz_ZZ
+LOCAL_AAPT_FLAGS += -c zz_ZZ \
+  --extra-packages com.brewcrewfoo.performance
 
 include $(BUILD_PACKAGE)
 

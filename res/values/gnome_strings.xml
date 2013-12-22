@@ -12,6 +12,9 @@
     <!-- Xposed -->
     <string name="xposed">Xposed</string>
 
+    <!-- Performance Controls -->
+    <string name="performance_controls">Performance Control</string>
+
     <!-- App Ops -->
     <string name="appops_settings_title">App Privacy</string>
 

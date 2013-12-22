@@ -223,6 +223,13 @@
         android:icon="@*android:drawable/ic_print"
         android:title="@string/print_settings" />
 
+    <!-- Performance Controls -->
+    <header
+        android:id="@+id/performance_controls"
+        android:fragment="com.brewcrewfoo.performance.activities.MainActivity"
+        android:icon="@drawable/ic_settings_performance"
+        android:title="@string/performance_settings" />
+
     <!-- Development -->
     <header
         android:id="@+id/development_settings"

@@ -33,16 +33,6 @@
     <string name="reset_string">Reset</string>
     <string name="profile_reset_title">Reset</string>
     <string name="ok">OK</string>
-    <!-- Volume rocker options -->
-    <string name="volume_rocker_category_title">Volume button control</string>
-    <!-- Volume rocker wake -->
-    <string name="pref_volume_wake_title">Volume rocker wake</string>
-    <string name="pref_volume_wake_summary">Pressing the volume buttons will wake your Device</string>
-    <!--- Volume key cursor control -->
-    <string name="volume_key_cursor_control_title">Volume key cursor control</string>
-    <string name="volume_key_cursor_control_off">Disabled</string>
-    <string name="volume_key_cursor_control_on">Volume up/down moves cursor left/right</string>
-    <string name="volume_key_cursor_control_on_reverse">Volume up/down moves cursor right/left</string>
     <!-- Navbar Buttons -->
     <string name="navigation_bar_header_title">Navigation bar</string>
     <string name="navigation_bar_title">NavBar Buttons</string>

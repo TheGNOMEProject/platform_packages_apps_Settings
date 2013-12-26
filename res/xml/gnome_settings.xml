@@ -41,6 +41,11 @@
         android:title="@string/show_always"
         android:summary="@string/show_always_summary" />
 
+   <CheckBoxPreference
+        android:key="wake_on_notification"
+        android:title="@string/wake_on_notification"
+        android:summary="@string/wake_on_notification_summary" />
+
     <CheckBoxPreference
         android:key="hide_low_priority"
         android:title="@string/hide_low_priority"
@@ -60,5 +65,10 @@
         android:key="expanded_view"
         android:title="@string/expanded_view"
         android:summary="@string/expanded_view_summary" />
+
+    <CheckBoxPreference
+        android:key="force_expanded_view"
+        android:title="@string/force_expanded_view"
+        android:summary="@string/force_expanded_view_summary" />
     </PreferenceCategory>
 </PreferenceScreen>

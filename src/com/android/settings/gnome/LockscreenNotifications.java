@@ -3,18 +3,22 @@ package com.android.settings.gnome;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.ContentResolver;
+import android.content.Context;
+import android.graphics.Point;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.preference.CheckBoxPreference;
 import android.preference.PreferenceScreen;
 import android.preference.Preference;
+import android.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
+import android.view.WindowManager;
 
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
 
-public class LockscreenNotifications extends SettingsPreferenceFragment {
+public class LockscreenNotifications extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener {
 
     private static final String KEY_LOCKSCREEN_NOTIFICATIONS = "lockscreen_notifications";
     private static final String KEY_POCKET_MODE = "pocket_mode";
@@ -25,6 +29,7 @@ public class LockscreenNotifications extends SettingsPreferenceFragment {
     private static final String KEY_EXPANDED_VIEW = "expanded_view";
     private static final String KEY_FORCE_EXPANDED_VIEW = "force_expanded_view";
     private static final String KEY_WAKE_ON_NOTIFICATION = "wake_on_notification";
+    private static final String KEY_NOTIFICATIONS_HEIGHT = "notifications_height";
 
     private CheckBoxPreference mLockscreenNotifications;
     private CheckBoxPreference mPocketMode;
@@ -35,6 +40,7 @@ public class LockscreenNotifications extends SettingsPreferenceFragment {
     private CheckBoxPreference mDismissAll;
     private CheckBoxPreference mExpandedView;
     private CheckBoxPreference mForceExpandedView;
+    private NumberPickerPreference mNotificationsHeight;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -87,6 +93,18 @@ public class LockscreenNotifications extends SettingsPreferenceFragment {
         mForceExpandedView.setChecked(Settings.System.getInt(cr,
                     Settings.System.LOCKSCREEN_NOTIFICATIONS_FORCE_EXPANDED_VIEW, 0) == 1);
         mForceExpandedView.setEnabled(mLockscreenNotifications.isChecked() && mExpandedView.isChecked());
+
+	mNotificationsHeight = (NumberPickerPreference) prefs.findPreference(KEY_NOTIFICATIONS_HEIGHT);
+        mNotificationsHeight.setValue(Settings.System.getInt(cr,
+                    Settings.System.LOCKSCREEN_NOTIFICATIONS_HEIGHT, 4));
+        Point displaySize = new Point();
+        ((WindowManager)mContext.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay().getSize(displaySize);
+        // Multiply height with 0.7 because notification offset is 0.3
+        int max = Math.round((float)displaySize.y * 0.7f /
+                (float)mContext.getResources().getDimensionPixelSize(R.dimen.notification_row_min_height));
+        mNotificationsHeight.setMinValue(1);
+        mNotificationsHeight.setMaxValue(max);
+        mNotificationsHeight.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -134,5 +152,14 @@ public class LockscreenNotifications extends SettingsPreferenceFragment {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
         return true;
+    }
+    @Override
+    public boolean onPreferenceChange(Preference pref, Object value) {
+        if (pref == mNotificationsHeight) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.LOCKSCREEN_NOTIFICATIONS_HEIGHT, (Integer)value);
+            return true;
+        }
+        return false;
     }
 }
